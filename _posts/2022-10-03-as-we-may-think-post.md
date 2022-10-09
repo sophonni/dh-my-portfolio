@@ -5,7 +5,7 @@ date:   "2022-09-21"
 categories: jekyll update
 ---
 
-## Reading Evaluation 1: As We May Know by Vannevar Bush
+## Reading Evaluation 2: As We May Know by Vannevar Bush
 
 Based on the article, the main question that Vannevar is trying to ask is "What was there to do now, for scientist?" 
 
