@@ -5,7 +5,7 @@ description: Here, I'm evaluating the Digital Humanity Project called "Mapping I
 ---
 ## Source
 
-[The University of Richmond, Virginia Tech, University of Maryland, and John Hopkins University.](https://dsl.richmond.edu/panorama/redlining/#loc=5/40.531/-101.492)
+[Mapping Inequality by The University of Richmond, Virginia Tech, University of Maryland, and John Hopkins University.](https://dsl.richmond.edu/panorama/redlining/#loc=5/40.531/-101.492)
 
 ## Evaluation
 
