@@ -5,7 +5,7 @@ description: By having a clean list, it's enchance our ability to its content in
 ---
 
 ## Source
-[William J. Turkel and Adam Crymble, "Counting Word Frequencies with Python" Programming Historian, https://doi.org/10.46430/phen0078.](https://programminghistorian.org/en/lessons/counting-frequencies)
+[William J. Turkel and Adam Crymble, "Counting Word Frequencies with Python" Programming Historian](https://programminghistorian.org/en/lessons/counting-frequencies)
 
 ```python
 # count-list-items-1.py
