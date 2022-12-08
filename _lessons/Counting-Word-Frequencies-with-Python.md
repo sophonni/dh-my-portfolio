@@ -5,20 +5,21 @@ description: By having a clean list, it's enchance our ability to its content in
 ---
 
 ## Source
-[William J. Turkel and Adam Crymble, "Counting Word Frequencies with Python" Programming Historian, https://programminghistorian.org/en/lessons/counting-frequencies ](https://programminghistorian.org/en/lessons/counting-frequencies)
+[William J. Turkel and Adam Crymble, "Counting Word Frequencies with Python" Programming Historian, https://doi.org/10.46430/phen0078.](https://programminghistorian.org/en/lessons/counting-frequencies)
+
+## Reflection
+Crowdsourcing is a way of outsourcing work by utilizing the input and contributions of people through an online platform. It is a way of collecting ideas, receiving input, or gathering data from the public, the proverbial “crowd.” There are many reasons a project may choose to use crowdsourcing as a method to gather data and input. Crowdsourcing lets you make use of the contributions of a diverse group of individuals, all with different skills and strengths. Crowdsourcing can be used for idea generation or for data collection and text transcription or translation. Projects of this nature are increasing as organizations such as libraries work to make their very large collections accessible online.
+
+By completing this specific programming historian, I've learned how to open a file containing data and read them. I've also learned how to work with a big collection of data where it's being separated by columns and rows and how to use built-in functions in order to manipulate the dataset in order to only retrieve the necessary data needed to study.
 
 ```python
 # count-list-items-1.py
-
 wordstring = 'it was the best of times it was the worst of times '
 wordstring += 'it was the age of wisdom it was the age of foolishness'
-
 wordlist = wordstring.split()
-
 wordfreq = []
 for w in wordlist:
     wordfreq.append(wordlist.count(w))
-
 print("String\n" + wordstring +"\n")
 print("List\n" + str(wordlist) + "\n")
 print("Frequencies\n" + str(wordfreq) + "\n")
@@ -27,13 +28,13 @@ print("Pairs\n" + str(list(zip(wordlist, wordfreq))))
 
     String
     it was the best of times it was the worst of times it was the age of wisdom it was the age of foolishness
-    
+
     List
     ['it', 'was', 'the', 'best', 'of', 'times', 'it', 'was', 'the', 'worst', 'of', 'times', 'it', 'was', 'the', 'age', 'of', 'wisdom', 'it', 'was', 'the', 'age', 'of', 'foolishness']
-    
+
     Frequencies
     [4, 4, 4, 1, 4, 2, 4, 4, 4, 1, 4, 2, 4, 4, 4, 2, 4, 1, 4, 4, 4, 2, 4, 1]
-    
+
     Pairs
     [('it', 4), ('was', 4), ('the', 4), ('best', 1), ('of', 4), ('times', 2), ('it', 4), ('was', 4), ('the', 4), ('worst', 1), ('of', 4), ('times', 2), ('it', 4), ('was', 4), ('the', 4), ('age', 2), ('of', 4), ('wisdom', 1), ('it', 4), ('was', 4), ('the', 4), ('age', 2), ('of', 4), ('foolishness', 1)]
 
@@ -45,9 +46,7 @@ print("Pairs\n" + str(list(zip(wordlist, wordfreq))))
 wordstring = 'it was the best of times it was the worst of times '
 wordstring += 'it was the age of wisdom it was the age of foolishness'
 wordlist = wordstring.split()
-
 wordfreq = [wordlist.count(w) for w in wordlist] # a list comprehension
-
 print("String\n" + wordstring +"\n")
 print("List\n" + str(wordlist) + "\n")
 print("Frequencies\n" + str(wordfreq) + "\n")
@@ -56,13 +55,13 @@ print("Pairs\n" + str(list(zip(wordlist, wordfreq))))
 
     String
     it was the best of times it was the worst of times it was the age of wisdom it was the age of foolishness
-    
+
     List
     ['it', 'was', 'the', 'best', 'of', 'times', 'it', 'was', 'the', 'worst', 'of', 'times', 'it', 'was', 'the', 'age', 'of', 'wisdom', 'it', 'was', 'the', 'age', 'of', 'foolishness']
-    
+
     Frequencies
     [4, 4, 4, 1, 4, 2, 4, 4, 4, 1, 4, 2, 4, 4, 4, 2, 4, 1, 4, 4, 4, 2, 4, 1]
-    
+
     Pairs
     [('it', 4), ('was', 4), ('the', 4), ('best', 1), ('of', 4), ('times', 2), ('it', 4), ('was', 4), ('the', 4), ('worst', 1), ('of', 4), ('times', 2), ('it', 4), ('was', 4), ('the', 4), ('age', 2), ('of', 4), ('wisdom', 1), ('it', 4), ('was', 4), ('the', 4), ('age', 2), ('of', 4), ('foolishness', 1)]
 
@@ -74,18 +73,12 @@ print("Pairs\n" + str(list(zip(wordlist, wordfreq))))
 # String is essentially a list of characters
 s = 'hello world'
 print(s[0])
-
 print(s[1])
-
 m = ['hello', 'world']
 print(m[0])
-
 print(m[1])
-
 print(m[0][1])
-
 print(m[1][0])
-
 ```
 
     h
@@ -100,11 +93,8 @@ print(m[1][0])
 ```python
 d = {'world': 1, 'hello': 0}
 print(d['hello'])
-
 print(d['world'])
-
 print(d.keys())
-
 ```
 
     0
@@ -115,16 +105,13 @@ print(d.keys())
 
 ```python
 import urllib.request, urllib.error, urllib.parse, obo
-
 url = 'http://www.oldbaileyonline.org/browse.jsp?id=t17800628-33&div=t17800628-33'
-
 response = urllib.request.urlopen(url)
 html = response.read().decode('UTF-8')
 text = obo.stripTags(html).lower()
 wordlist = obo.stripNonAlphaNum(text)
 dictionary = obo.wordListToFreqDict(wordlist)
 sorteddict = obo.sortFreqDict(dictionary)
-
 for s in sorteddict: print(str(s))
 ```
 
@@ -713,33 +700,23 @@ for s in sorteddict: print(str(s))
 
 
 ```python
-
 ```
+ 472  
+_lessons/Counting Word Frequencies with Python/html-to-freq-2.md
+@@ -0,0 +1,472 @@
+---
+layout: page
+title: Crowdsourced-Data Normalization with Python and Pandas
+description: This lesson describes crowdsourcing as a form of data creation as well as how pandas can be used to prepare a crowdsourced dataset for analysis. This lesson covers managing duplicate and missing data and explains the difficulties of dealing with dates.
+---
 
+## Source
+[Brandon Walsh, "Crowdsourced-Data Normalization with Python and Pandas" Programming Historian, https://doi.org/10.46430/phen0078.](https://programminghistorian.org/en/lessons/crowdsourced-data-normalization-with-pandas)
 
+## Reflection
+Crowdsourcing is a way of outsourcing work by utilizing the input and contributions of people through an online platform. It is a way of collecting ideas, receiving input, or gathering data from the public, the proverbial “crowd.” There are many reasons a project may choose to use crowdsourcing as a method to gather data and input. Crowdsourcing lets you make use of the contributions of a diverse group of individuals, all with different skills and strengths. Crowdsourcing can be used for idea generation or for data collection and text transcription or translation. Projects of this nature are increasing as organizations such as libraries work to make their very large collections accessible online.
 
-
-## A program which takes a URL and returns word-frequency pairs for the web page, sorted in order of descending frequency
-
-
-```python
-# html-to-freq-2.py
-
-import urllib.request, urllib.error, urllib.parse
-import obo
-
-url = 'http://www.oldbaileyonline.org/browse.jsp?id=t17800628-33&div=t17800628-33'
-
-response = urllib.request.urlopen(url)
-html = response.read().decode('UTF-8')
-text = obo.stripTags(html).lower()
-fullwordlist = obo.stripNonAlphaNum(text)
-wordlist = obo.removeStopwords(fullwordlist, obo.stopwords)
-dictionary = obo.wordListToFreqDict(wordlist)
-sorteddict = obo.sortFreqDict(dictionary)
-
-for s in sorteddict: print(str(s))
-```
+By completing this specific programming historian, I've learned how to open a file containing data and read them. I've also learned how to work with a big collection of data where it's being separated by columns and rows and how to use built-in functions in order to manipulate the dataset in order to only retrieve the necessary data needed to study.
 
 ## Combine All the Files Together
 
@@ -747,9 +724,7 @@ for s in sorteddict: print(str(s))
 ```python
 import urllib.request, urllib.error, urllib.parse
 import obo
-
 url = 'http://www.oldbaileyonline.org/browse.jsp?id=t17800628-33&div=t17800628-33'
-
 response = urllib.request.urlopen(url)
 html = response.read().decode('UTF-8')
 text = obo.stripTags(html).lower()
@@ -757,7 +732,6 @@ fullwordlist = obo.stripNonAlphaNum(text)
 wordlist = obo.removeStopwords(fullwordlist, obo.stopwords)
 dictionary = obo.wordListToFreqDict(wordlist)
 sorteddict = obo.sortFreqDict(dictionary)
-
 for s in sorteddict: print(str(s))
 ```
 
@@ -1199,9 +1173,38 @@ for s in sorteddict: print(str(s))
     (1, '3')
     (1, '')
 
+ 30  
+_lessons/Counting Word Frequencies with Python/html-to-freq.md
+@@ -0,0 +1,30 @@
+---
+layout: page
+title: Counting Word Frequencies with Python
+description: By having a clean list, it's enchance our ability to its content in a meaningful way. Counting the frequency of specific words in the list can provide illustrative data. Python has an easy way to count frequencies, but it requires the use of a new type of variable: the dictionary. Before you begin working with a dictionary, consider the processes used to calculate frequencies in a list.
+---
 
-## obo.py
+## Source
+[William J. Turkel and Adam Crymble, "Counting Word Frequencies with Python" Programming Historian, https://doi.org/10.46430/phen0078.](https://programminghistorian.org/en/lessons/counting-frequencies)
 
+
+## A program which takes a URL and returns word-frequency pairs for the web page, sorted in order of descending frequency
+
+```python
+# html-to-freq-2.py
+import urllib.request, urllib.error, urllib.parse
+import obo
+url = 'http://www.oldbaileyonline.org/browse.jsp?id=t17800628-33&div=t17800628-33'
+response = urllib.request.urlopen(url)
+html = response.read().decode('UTF-8')
+text = obo.stripTags(html).lower()
+fullwordlist = obo.stripNonAlphaNum(text)
+wordlist = obo.removeStopwords(fullwordlist, obo.stopwords)
+dictionary = obo.wordListToFreqDict(wordlist)
+sorteddict = obo.sortFreqDict(dictionary)
+for s in sorteddict: print(str(s))
+```
+ 29  
+_lessons/Counting Word Frequencies with Python/obo.py
+@@ -0,0 +1,29 @@
 # obo.py
 def stripTags(pageContents):
     pageContents = str(pageContents)
@@ -1209,6 +1212,8 @@ def stripTags(pageContents):
     endLoc = pageContents.rfind("<br/>")
 
     pageContents = pageContents[startLoc:endLoc]
+
+    inside = 0
     text = ''
 
     for char in pageContents:
@@ -1225,81 +1230,7 @@ def stripTags(pageContents):
 
 # Given a text string, remove all non-alphanumeric
 # characters (using Unicode definition of alphanumeric).
+
 def stripNonAlphaNum(text):
     import re
     return re.compile(r'\W+', re.UNICODE).split(text)
-
-# Given a list of words, return a dictionary of
-# word-frequency pairs.
-def wordListToFreqDict(wordlist):
-    wordfreq = [wordlist.count(p) for p in wordlist]
-    return dict(list(zip(wordlist,wordfreq)))
-
-# Sort a dictionary of word-frequency pairs in
-# order of descending frequency.
-def sortFreqDict(freqdict):
-    aux = [(freqdict[key], key) for key in freqdict]
-    aux.sort()
-    aux.reverse()
-    return aux
-
-
-
-# List of Stopwords
-stopwords = ['a', 'about', 'above', 'across', 'after', 'afterwards']
-stopwords += ['again', 'against', 'all', 'almost', 'alone', 'along']
-stopwords += ['already', 'also', 'although', 'always', 'am', 'among']
-stopwords += ['amongst', 'amoungst', 'amount', 'an', 'and', 'another']
-stopwords += ['any', 'anyhow', 'anyone', 'anything', 'anyway', 'anywhere']
-stopwords += ['are', 'around', 'as', 'at', 'back', 'be', 'became']
-stopwords += ['because', 'become', 'becomes', 'becoming', 'been']
-stopwords += ['before', 'beforehand', 'behind', 'being', 'below']
-stopwords += ['beside', 'besides', 'between', 'beyond', 'bill', 'both']
-stopwords += ['bottom', 'but', 'by', 'call', 'can', 'cannot', 'cant']
-stopwords += ['co', 'computer', 'con', 'could', 'couldnt', 'cry', 'de']
-stopwords += ['describe', 'detail', 'did', 'do', 'done', 'down', 'due']
-stopwords += ['during', 'each', 'eg', 'eight', 'either', 'eleven', 'else']
-stopwords += ['elsewhere', 'empty', 'enough', 'etc', 'even', 'ever']
-stopwords += ['every', 'everyone', 'everything', 'everywhere', 'except']
-stopwords += ['few', 'fifteen', 'fifty', 'fill', 'find', 'fire', 'first']
-stopwords += ['five', 'for', 'former', 'formerly', 'forty', 'found']
-stopwords += ['four', 'from', 'front', 'full', 'further', 'get', 'give']
-stopwords += ['go', 'had', 'has', 'hasnt', 'have', 'he', 'hence', 'her']
-stopwords += ['here', 'hereafter', 'hereby', 'herein', 'hereupon', 'hers']
-stopwords += ['herself', 'him', 'himself', 'his', 'how', 'however']
-stopwords += ['hundred', 'i', 'ie', 'if', 'in', 'inc', 'indeed']
-stopwords += ['interest', 'into', 'is', 'it', 'its', 'itself', 'keep']
-stopwords += ['last', 'latter', 'latterly', 'least', 'less', 'ltd', 'made']
-stopwords += ['many', 'may', 'me', 'meanwhile', 'might', 'mill', 'mine']
-stopwords += ['more', 'moreover', 'most', 'mostly', 'move', 'much']
-stopwords += ['must', 'my', 'myself', 'name', 'namely', 'neither', 'never']
-stopwords += ['nevertheless', 'next', 'nine', 'no', 'nobody', 'none']
-stopwords += ['noone', 'nor', 'not', 'nothing', 'now', 'nowhere', 'of']
-stopwords += ['off', 'often', 'on','once', 'one', 'only', 'onto', 'or']
-stopwords += ['other', 'others', 'otherwise', 'our', 'ours', 'ourselves']
-stopwords += ['out', 'over', 'own', 'part', 'per', 'perhaps', 'please']
-stopwords += ['put', 'rather', 're', 's', 'same', 'see', 'seem', 'seemed']
-stopwords += ['seeming', 'seems', 'serious', 'several', 'she', 'should']
-stopwords += ['show', 'side', 'since', 'sincere', 'six', 'sixty', 'so']
-stopwords += ['some', 'somehow', 'someone', 'something', 'sometime']
-stopwords += ['sometimes', 'somewhere', 'still', 'such', 'system', 'take']
-stopwords += ['ten', 'than', 'that', 'the', 'their', 'them', 'themselves']
-stopwords += ['then', 'thence', 'there', 'thereafter', 'thereby']
-stopwords += ['therefore', 'therein', 'thereupon', 'these', 'they']
-stopwords += ['thick', 'thin', 'third', 'this', 'those', 'though', 'three']
-stopwords += ['three', 'through', 'throughout', 'thru', 'thus', 'to']
-stopwords += ['together', 'too', 'top', 'toward', 'towards', 'twelve']
-stopwords += ['twenty', 'two', 'un', 'under', 'until', 'up', 'upon']
-stopwords += ['us', 'very', 'via', 'was', 'we', 'well', 'were', 'what']
-stopwords += ['whatever', 'when', 'whence', 'whenever', 'where']
-stopwords += ['whereafter', 'whereas', 'whereby', 'wherein', 'whereupon']
-stopwords += ['wherever', 'whether', 'which', 'while', 'whither', 'who']
-stopwords += ['whoever', 'whole', 'whom', 'whose', 'why', 'will', 'with']
-stopwords += ['within', 'without', 'would', 'yet', 'you', 'your']
-stopwords += ['yours', 'yourself', 'yourselves']
-
-
-# Given a list of words, remove any that are
-# in a list of stop words.
-def removeStopwords(wordlist, stopwords):
-    return [w for w in wordlist if w not in stopwords]
