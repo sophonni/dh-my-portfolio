@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Counting Word Frequencies with Python
-description: By having a clean list, it's enchance our ability to its content in a meaningful way. Counting the frequency of specific words in the list can provide illustrative data. Python has an easy way to count frequencies, but it requires the use of a new type of variable: the dictionary. Before you begin working with a dictionary, consider the processes used to calculate frequencies in a list.
+description: By having a clean list, it's enchance our ability to its content in a meaningful way. Counting the frequency of specific words in the list can provide illustrative data. Python has an easy way to count frequencies, but it requires the use of a new type of variable the dictionary. Before you begin working with a dictionary, consider the processes used to calculate frequencies in a list.
 ---
 
 ## Source
