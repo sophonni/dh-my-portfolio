@@ -8,9 +8,7 @@ description: By having a clean list, it's enchance our ability to its content in
 [William J. Turkel and Adam Crymble, "Counting Word Frequencies with Python" Programming Historian, https://doi.org/10.46430/phen0078.](https://programminghistorian.org/en/lessons/counting-frequencies)
 
 ## Reflection
-Crowdsourcing is a way of outsourcing work by utilizing the input and contributions of people through an online platform. It is a way of collecting ideas, receiving input, or gathering data from the public, the proverbial “crowd.” There are many reasons a project may choose to use crowdsourcing as a method to gather data and input. Crowdsourcing lets you make use of the contributions of a diverse group of individuals, all with different skills and strengths. Crowdsourcing can be used for idea generation or for data collection and text transcription or translation. Projects of this nature are increasing as organizations such as libraries work to make their very large collections accessible online.
-
-By completing this specific programming historian, I've learned how to open a file containing data and read them. I've also learned how to work with a big collection of data where it's being separated by columns and rows and how to use built-in functions in order to manipulate the dataset in order to only retrieve the necessary data needed to study.
+By completing this program historian, I will be able to maximize its use in my final project while also ensuring that the dataset is clean and easy to work with. With clean datasets, I'll be able to begin meaningfully analyzing their contents. The frequency of specific words in the list can be counted to provide illustrative data. The dictionary is a new type of variable in Python that can be used to count frequencies. Consider the processes used to calculate frequencies in a list before beginning to work with a dictionary.
 
 ```python
 # count-list-items-1.py
